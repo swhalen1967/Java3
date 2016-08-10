@@ -1,0 +1,51 @@
+What must be present in an archive with the file extension .war?
+	WEB-INF and its structure (including web.xml)
+	
+Name two packages that are part of Java EE but not part of Java SE.
+	javax.servlet and javax.json
+	
+In Tomcat, where will the classes defining these packages be found?
+	%CATALINA_HOME%/lib/servlet-api.jar
+	
+To write a servlet, what class must you extend (fully-qualified name, please)?
+	javax.servlet.http.HttpServlet
+	
+What HTTP method would your browser use to send a request caused by typing a URL into the location bar and pressing Enter?
+	GET
+	
+What HTTP method would your browser use by default to send form elements?
+	POST should be GET
+	
+In the url http://www.bytecaffeine.com:8080/foo/?bar=15, what text makes up the following parts?
+The query string - ?bar=15
+The protocol - http
+The path - /foo
+The host - www.bytecaffeine.com
+The port - 8080
+
+Assuming the previous URL is implemented as a J2EE web application, what text corresponds to the part we call the context?
+	/foo
+	
+What must be included in an HTTP 1.1 request (your browser automatically provides this)?
+	the HOST header
+	
+What must be included in any successful HTTP 1.1 response?
+	200 status code not content-type
+	
+In implementing a servlet, what method(s) must you override?
+	doGet and doPost
+	
+Describe the signature of the overridden method(s) from question 11.
+	public class CLASSNAME extends HttpServlet {
+	    @Override 
+		public void doGet(HttpServletRequest request, HttpServletResponse response)
+	    throws ServletException, IOException 
+	
+What must happen to a JSP the first time it is requested in a deployed web app?
+	The web application container must spin up a special servlet named Jasper. Jasper's job is to convert the JSP into a servlet
+	
+How do you associate the context-relative URL /servlet with an actual instance of a servlet class at web application run-time?
+	servlet and servlet-mapping in web/xml
+	
+What is the most likely cause of a web application that loads false at deploy-time in Tomcat?
+	Typos in web.xml
